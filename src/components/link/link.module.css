@@ -60,7 +60,7 @@ aside .listItem a {
     color: #234465;
     text-align: center;
     text-decoration: none;
-    padding-top: 5%;
+    padding-top: 0;
     height: 60%;
     display: block;
 }
