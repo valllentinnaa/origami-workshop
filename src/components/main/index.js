@@ -15,9 +15,9 @@ class Main extends Component {
     renderOrigamis() {
         const {origamis} = this.state;
 
-        return origamis.map(origami => {
+        return origamis.map((origami, i) => {
             return (
-                <Post key={origami._id} {...origami}/>
+                <Post key={origami._id} {...origami} index={i}/>
             )
         });
     }

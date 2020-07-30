@@ -1,16 +1,24 @@
 import React from "react";
 import styles from './footer.module.css';
-import Link from "../link";
+import LinkComponent from "../link";
+import getNavigation from "../../utils/navigation";
 
 const Footer = () => {
-    return(
+    const links = getNavigation();
+    return (
         <footer className={styles.Footer}>
             <div>
-                <Link href="#" name="Going to 1"/>
-                <Link href="#" name="Going to 2"/>
-                <Link href="#" name="Going to 3"/>
-                <Link href="#" name="Going to 4"/>
-                <Link href="#" name="Going to 5"/>
+                {
+                    links.map(navItem => {
+                        return (
+                            <LinkComponent
+                                key={`footer-${navItem.title}-${Math.random()}`}
+                                link={navItem.link}
+                                title={navItem.title}
+                            />
+                        )
+                    })
+                }
             </div>
             <p>Software university 2019</p>
         </footer>

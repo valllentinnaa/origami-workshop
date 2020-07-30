@@ -1,17 +1,25 @@
 import React from "react";
 import styles from './header.module.css'
-import Link from '../link';
+import LinkComponent from '../link';
 import logo from '../../images/white-origami-bird.png'
+import getNavigation from "../../utils/navigation";
 
 const Header = () => {
+    const links = getNavigation();
     return (
         <nav className={styles.Navigation}>
             <img className={styles.logo} src={logo}/>
-            <Link href="#" name="Going to 1"/>
-            <Link href="#" name="Going to 2"/>
-            <Link href="#" name="Going to 3"/>
-            <Link href="#" name="Going to 4"/>
-            <Link href="#" name="Going to 5"/>
+            {
+                links.map(navItem => {
+                    return (
+                        <LinkComponent
+                            key={`header-${navItem.title}-${Math.random()}`}
+                            link={navItem.link}
+                            title={navItem.title}
+                        />
+                    )
+                })
+            }
         </nav>
     );
 };

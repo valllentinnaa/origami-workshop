@@ -10,3 +10,11 @@
   /* border: 1px solid purple; */
   margin-bottom: 0.1%;
 }
+
+.Main {
+  display: inline-block;
+  width: 83%;
+  height: auto;
+  /* border:1px solid blue; */
+  margin-bottom: 5%;
+}

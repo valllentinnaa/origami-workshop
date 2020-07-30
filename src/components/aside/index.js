@@ -1,14 +1,23 @@
 import React from "react";
 import styles from './aside.module.css';
-import Link from "../link";
+import LinkComponent from "../link";
+import getNavigation from "../../utils/navigation";
 
 const Aside = () => {
+    const links = getNavigation();
     return (
         <aside className={styles.Aside}>
-            <Link href="#" name="Going to 0"/>
-            <Link href="#" name="Going to 1"/>
-            <Link href="#" name="Going to 2"/>
-            <Link href="#" name="Going to 3"/>
+            {
+                links.map(navItem => {
+                    return (
+                        <LinkComponent
+                            key={`aside-${navItem.title}-${Math.random()}`}
+                            link={navItem.link}
+                            title={navItem.title}
+                        />
+                    )
+                })
+            }
         </aside>
     );
 };
