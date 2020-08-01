@@ -10,8 +10,8 @@ const Container = (props) => {
         <div className={styles.App}>
             <Header/>
             <div className={styles.Container}>
-                <div className={styles.Main}>
                 <Aside/>
+                <div className={styles.Main}>
                 {props.children}
                 </div>
             </div>

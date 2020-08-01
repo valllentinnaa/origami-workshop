@@ -2,7 +2,7 @@ import React from "react";
 import styles from './title.module.css';
 
 const Title = ({title}) => {
-    return <Title className={styles.title}>{title}</Title>
+    return <div className={styles.title}>{title}</div>
 };
 
 export default Title;
