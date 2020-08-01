@@ -1,12 +1,13 @@
 import React from "react";
 import styles from './link.module.css';
+import {Link} from 'react-router-dom';
 
-const Link = ({name, href}) => {
+const LinkComponent = ({title, link}) => {
     return (
         <div className={styles.listItem}>
-            <a href={href}>{name}</a>
+            <Link to={link}>{title}</Link>
         </div>
     )
 };
 
-export default Link;
+export default LinkComponent;
