@@ -14,11 +14,11 @@ const getNavigation = (userId) => {
         },
         {
             title: 'Login',
-            link: '/register'
+            link: '/login'
         },
         {
             title: 'Register',
-            link: '/login'
+            link: '/register'
         },
         {
             title: 'Publications',
